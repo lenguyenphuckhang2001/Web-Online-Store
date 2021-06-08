@@ -20,8 +20,9 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     if($login_check > 0){ 
         session_start();
          // Store data in session variables
-        $id = $data[0];
-        $username = $data[1];
+        $row= pg_fetch_array($data);
+        $id = $row['id'];
+        $username = $row['username'];
         $_SESSION["loggedin"] = true;
         $_SESSION["id"] = $id;
         $_SESSION["username"] = $username;                            

@@ -10,7 +10,7 @@
  include "config.php";
  $dbconn = pg_connect($conn_string);
   //include 'config.php';
- // session_start();
+ session_start();
 
 $username = $_SESSION["username"];
 $sql = "SELECT * FROM users1 where username='$username'";
@@ -19,7 +19,7 @@ $data = pg_query($dbconn,$sql);
 
 //$query=mysqli_query($link, $sql) or die(mysqli_error());
 $row= pg_fetch_array($data);
-echo $sql;
+echo $username;
   ?>
   
   <h1>User Profile</h1>
