@@ -1,9 +1,9 @@
 <?php
 class DBController {
-	private $host = "localhost";
-	private $user = "root";
-	private $password = "";
-	private $database = "shoeshop";
+	private $host = "ec2-54-211-176-156.compute-1.amazonaws.com";
+	private $user = "lkblfujpnveoph";
+	private $password = "a2dda41d2a64a9bc1de4ccc447742ff9c32185457810c259326670ce98c0fc42";
+	private $database = "d7k35e83nt54kf";
 	private $conn;
 	
 	function __construct() {
@@ -11,13 +11,13 @@ class DBController {
 	}
 	
 	function connectDB() {
-		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
+		$conn = pg_connect($this->host,$this->user,$this->password,$this->database);
 		return $conn;
 	}
 	
 	function runQuery($query) {
-		$result = mysqli_query($this->conn,$query);
-		while($row=mysqli_fetch_assoc($result)) {
+		$result = pg_query($this->conn,$query);
+		while($row=pg_fetch_assoc($result)) {
 			$resultset[] = $row;
 		}		
 		if(!empty($resultset))
@@ -25,8 +25,8 @@ class DBController {
 	}
 	
 	function numRows($query) {
-		$result  = mysqli_query($this->conn,$query);
-		$rowcount = mysqli_num_rows($result);
+		$result  = pg_query($this->conn,$query);
+		$rowcount = pg_num_rows($result);
 		return $rowcount;	
 	}
 }
