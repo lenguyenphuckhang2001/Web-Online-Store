@@ -4,6 +4,8 @@
   <link rel="stylesheet" href="../CSS/bootstrap.min.css">
   <link rel="stylesheet" href="../CSS/style.css">
   </head>
+  <body>
+      <h1> Profile</h1>
   <?php
   require_once "config.php";
  $dbconn = pg_connect($conn_string);
@@ -47,5 +49,6 @@ $row=pg_fetch_array($query);
           </td>
       </tr>
   </table>
+  </body>
    </html>
       
