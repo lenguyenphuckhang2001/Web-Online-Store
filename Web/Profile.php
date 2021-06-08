@@ -10,7 +10,7 @@
  include "config.php";
  $dbconn = pg_connect($conn_string);
   //include 'config.php';
-  session_start();
+ // session_start();
 
 $username = $_SESSION["username"];
 $sql = "SELECT * FROM users1 where username='$username'";
