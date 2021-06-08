@@ -13,7 +13,7 @@
   session_start();
 
 $username = $_SESSION["username"];
-$sql = "SELECT * FROM users1 where username='$username'";
+$sql = "SELECT * FROM users1";// where username='$username'";
 echo $sql;
 $data = pg_query($dbconn,$sql); 
 //$query=mysqli_query($link, $sql) or die(mysqli_error());
