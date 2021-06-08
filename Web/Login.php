@@ -20,11 +20,13 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     if($login_check > 0){ 
         session_start();
          // Store data in session variables
+        $id = $data[0];
+        $username = $data[1];
         $_SESSION["loggedin"] = true;
         $_SESSION["id"] = $id;
         $_SESSION["username"] = $username;                            
         // Redirect user to welcome page
-        echo $_SESSION["username"];
+        
         header("location: ../index.php");
         } else{
           // Display an error message if password is not valid
