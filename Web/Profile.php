@@ -5,14 +5,16 @@
   <link rel="stylesheet" href="../CSS/style.css">
   </head>
   <?php
-  include 'config.php';
+  require_once "config.php";
+ $dbconn = pg_connect($conn_string);
+  //include 'config.php';
   session_start();
 
 $userid = $_SESSION["username"];
 $sql = "SELECT * FROM users1 where username='$userid'";
-
-$query=mysqli_query($link, $sql) or die(mysqli_error());
-$row=mysqli_fetch_array($query);
+$data = pg_query($dbconn,$sql); 
+//$query=mysqli_query($link, $sql) or die(mysqli_error());
+$row=pg_fetch_array($query);
   ?>
   
   <h1>User Profile</h1>
