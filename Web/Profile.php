@@ -11,12 +11,13 @@
  $dbconn = pg_connect($conn_string);
   //include 'config.php';
   session_start();
-echo "stop here.";
+
 $userid = $_SESSION["username"];
 $sql = "SELECT * FROM users1 where username='$userid'";
 $data = pg_query($dbconn,$sql); 
 //$query=mysqli_query($link, $sql) or die(mysqli_error());
 $row=pg_fetch_array($query);
+echo "stop here.";
   ?>
   
   <h1>User Profile</h1>
