@@ -24,6 +24,7 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
         $_SESSION["id"] = $id;
         $_SESSION["username"] = $username;                            
         // Redirect user to welcome page
+        echo $_SESSION["username"];
         header("location: ../index.php");
         } else{
           // Display an error message if password is not valid
