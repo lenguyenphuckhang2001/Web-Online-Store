@@ -4,6 +4,7 @@ class DBController {
 	private $user = "lkblfujpnveoph";
 	private $password = "a2dda41d2a64a9bc1de4ccc447742ff9c32185457810c259326670ce98c0fc42";
 	private $database = "d7k35e83nt54kf";
+        private $port = "5432";
 	private $conn;
 	
 	function __construct() {
@@ -11,7 +12,7 @@ class DBController {
 	}
 	
 	function connectDB() {
-		$conn = pg_connect($this->host,$this->user,$this->password,$this->database);
+		$conn = pg_connect($this->host,$this->user,$this->password,$this->database, $this->port);
 		return $conn;
 	}
 	

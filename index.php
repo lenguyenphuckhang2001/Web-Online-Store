@@ -57,7 +57,7 @@
                   <nav class="main-menu ">
                     <ul class="menu-area-main">
                        <li class="nav-item">
-                           <a class="nav-link" href="Web/Cart1.php">Shopping</a>
+                           <a class="nav-link" href="Web/Cart.php">Shopping</a>
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" href="Web/Profile.php">Profile</a>
