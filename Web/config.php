@@ -1,9 +1,9 @@
 <?php
-$conn_string = "host = ec2-54-211-176-156.compute-1.amazonaws.com"
+$conn_string = "host ec2-54-163-97-228.compute-1.amazonaws.com"
         . " port = 5432"
-        . " dbname = d7k35e83nt54kf"
-        . " user = lkblfujpnveoph"
-        . " password = a2dda41d2a64a9bc1de4ccc447742ff9c32185457810c259326670ce98c0fc42";
+        . " dbname = db7ocujvrjhkhf"
+        . " user = uccxffblhubvvq"
+        . " password = 0f47f8f79cd720b045b6f135b87a10737bf716e682dace62d0100d41fcf23a90";
 $db = pg_connect($conn_string);
 //connect to a database named "test" on the host "sheep" with a username and password
    if(!$db) {
